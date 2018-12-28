@@ -37,6 +37,16 @@
     <link rel="stylesheet" href="../app/css/style.css">
 
     <link rel="stylesheet" href="../app/css/myCSS/style.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--
+    <link rel="stylesheet" type="text/css" href="../app/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="../app/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/table/util.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/table/main.css">-->
+    <link rel="stylesheet" type="text/css" href="../app/css/myCSS/table.css">
   </head>
   <body>
     <?php 
@@ -46,24 +56,19 @@
 
     <div id='usermenu'>
       <ul>
-        <li class='active'><a href='#'>Mój profil</a></li>
+        <li><a href='indexUserLogged.php'>Mój profil</a></li>
         <li><a href='drivers.php'>Kierowcy</a></li>
-        <li><a href='cars.php'>Samochody</a></li>
+        <li class="active"><a href='#'>Samochody</a></li>
         <li><a href='#'>Transporty</a></li>
       </ul>
     </div>
 
     <section class="ftco-section contact-section bg-light">
       <div class="container">
-        <h2 class="h3">Zalogowany: <?php echo $_SESSION['name']." ".$_SESSION['surename']; ?></h2>
-        <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <!-- otzymane dane -->
-            <?php 
-               echo"<p>Witaj ".$_SESSION['user']."!";
-            ?>
-          </div>
-        </div>
+        <?php 
+            require_once "../Model/DatabaseQuery.php";
+            showCarsData();
+        ?>
       </div>
     </section>
     
@@ -92,6 +97,12 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="../app/js/google-map.js"></script>
     <script src="../app/js/main.js"></script>
+
+    <script src="../app/vendor/jquery/jquery-3.2.1.min.js"></script>
+	  <script src="../app/vendor/bootstrap/js/popper.js"></script>
+    <script src="../app/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../app/vendor/select2/select2.min.js"></script>
+    <script src="js/table/main.js"></script>
     
   </body>
 </html>
