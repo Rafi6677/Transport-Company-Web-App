@@ -38,12 +38,12 @@
  
                 unset($_SESSION['loginError']);
                 $result->close();
-                header('Location: ../View/indexUserLogged.php');
+                header('Location: ../Pages/indexUserLogged.php');
             }
             else
             {
                 $_SESSION['loginError'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';
-                header('Location: ../View/login.php');
+                header('Location: ../Pages/login.php');
             }
         }
 

@@ -36,38 +36,36 @@
     <link rel="stylesheet" href="../app/css/icomoon.css">
     <link rel="stylesheet" href="../app/css/style.css">
 
-    <link rel="stylesheet" href="../app/css/myCSS/style.css">
-
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../app/css/MyCSS/footer.css">
     <!--
-    <link rel="stylesheet" type="text/css" href="../app/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../app/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="../app/vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="../app/vendor/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="../app/css/table/util.css">
-    <link rel="stylesheet" type="text/css" href="../app/css/table/main.css">-->
+    <link rel="stylesheet" type="text/css" href="../app/css/myCSS/style.css">
     <link rel="stylesheet" type="text/css" href="../app/css/myCSS/table.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/myCSS/stylev2.css">
+    -->
+    <link rel="stylesheet" type="text/css" href="../app/css/myCSS/myStyle.css">
   </head>
   <body>
     <?php 
-    include_once("MainView.php");
-    addNavbar();
+      include_once("../View/MainView.php");
+      addNavbar();
     ?>
 
     <div id='usermenu'>
       <ul>
         <li><a href='indexUserLogged.php'>Mój profil</a></li>
-        <li><a href='drivers.php'>Kierowcy</a></li>
-        <li class="active"><a href='#'>Samochody</a></li>
-        <li><a href='#'>Transporty</a></li>
+        <li class="active"><a href='#'>Kierowcy</a></li>
+        <li><a href='cars.php'>Samochody</a></li>
+        <li><a href='transports.php'>Transporty</a></li>
       </ul>
     </div>
-
+    <div id='insert-button'>
+      <a class="link" href="insert.php?table=kierowcy">Dodaj nowego kierowcę</a>
+    </div>
     <section class="ftco-section contact-section bg-light">
       <div class="container">
         <?php 
-            require_once "../Model/DatabaseQuery.php";
-            showCarsData();
+          require_once "../Model/DatabaseQuery.php";
+          showDriversData();
         ?>
       </div>
     </section>

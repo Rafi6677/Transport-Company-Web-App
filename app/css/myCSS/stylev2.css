@@ -1,0 +1,39 @@
+.link{
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+.link:hover{
+  text-decoration: none;
+  color: #fff;
+}
+#insert-button{
+  width: auto;
+  margin-left: 14%;
+  margin-right: 14%;
+  margin-top: 20px;
+  background: rgb(255, 143, 86);
+  min-height: 50px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  font-size: 200%;
+}
+#insert-button:hover{
+  background: rgb(213, 113, 56);
+}
+.footer-mine{
+  text-align: center;
+  background: rgb(37, 42, 43);
+  color: white;
+  padding: 20px 0 20px 0;
+}
+
+.edit{
+  padding: 10px 13.5% 10px 13.5%;
+}
+.content{
+  font-size: 150%;
+}
